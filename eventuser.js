@@ -28,7 +28,7 @@ var params = {
                 AttributeType: 'S', // (S | N | B) for string, number, binary
             },
 			{
-                AttributeName: 'status',
+                AttributeName: 'userstatus',
                 AttributeType: 'S', // (S | N | B) for string, number, binary
             }
         ],
@@ -78,10 +78,10 @@ var params = {
                 },
             },
 			{ 
-                IndexName: 'status', 
+                IndexName: 'userstatus', 
                 KeySchema: [
                     { // Required HASH type attribute
-                        AttributeName: 'status',
+                        AttributeName: 'userstatus',
                         KeyType: 'HASH',
                     }
                 ],
