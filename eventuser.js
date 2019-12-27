@@ -26,10 +26,6 @@ var params = {
 			{
                 AttributeName: 'userid',
                 AttributeType: 'S', // (S | N | B) for string, number, binary
-            },
-			{
-                AttributeName: 'userstatus',
-                AttributeType: 'S', // (S | N | B) for string, number, binary
             }
         ],
         ProvisionedThroughput: { // required provisioned throughput for the table
@@ -62,26 +58,6 @@ var params = {
                 KeySchema: [
                     { // Required HASH type attribute
                         AttributeName: 'userid',
-                        KeyType: 'HASH',
-                    }
-                ],
-                Projection: { // attributes to project into the index
-                    ProjectionType: 'ALL', // (ALL | KEYS_ONLY | INCLUDE)
-                    // NonKeyAttributes: [ // required / allowed only for INCLUDE
-                    //     'attribute_name_1',
-                    //     // ... more attribute names ...
-                    // ],
-                },
-                ProvisionedThroughput: { // throughput to provision to the index
-                    ReadCapacityUnits: 1,
-                    WriteCapacityUnits: 1,
-                },
-            },
-			{ 
-                IndexName: 'userstatus', 
-                KeySchema: [
-                    { // Required HASH type attribute
-                        AttributeName: 'userstatus',
                         KeyType: 'HASH',
                     }
                 ],
