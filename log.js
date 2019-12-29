@@ -6,7 +6,7 @@ var params = {
                 KeyType: 'HASH',
             },
             { // Optional RANGE key type for HASH + RANGE tables
-                AttributeName: 'eventname', 
+                AttributeName: 'timestamp', 
                 KeyType: 'RANGE', 
             }
         ],
@@ -16,7 +16,7 @@ var params = {
                 AttributeType: 'S', // (S | N | B) for string, number, binary
             },
             {
-                AttributeName: 'eventname',
+                AttributeName: 'timestamp',
                 AttributeType: 'S', // (S | N | B) for string, number, binary
             }
         ],
